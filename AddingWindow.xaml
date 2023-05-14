@@ -1,0 +1,73 @@
+﻿<Window x:Class="WpfAppAAA.AddingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppAAA"
+        mc:Ignorable="d"
+        Title="Окно добавления" Icon="icon.ico" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Content="art" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <TextBox Text="{Binding ProductArticleNumber}"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="409"/>
+
+        <Label Content="name" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <TextBox  Text="{Binding ProductName}"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="409"/>
+
+        <Label Content="desc" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <TextBox Text="{Binding ProductDescription}"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="409"/>
+
+        <Label Content="cat" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <ComboBox x:Name="Category" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Width="409" Margin="10,10,0,0">
+            <ComboBoxItem Content= "Горшки"/>
+            <ComboBoxItem Content="В горшке"/>
+            <ComboBoxItem Content="Букеты"/>
+        </ComboBox>
+        
+       
+        <Label Content="manif" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <ComboBox x:Name="Manif" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="1" VerticalAlignment="Top" Width="409" Margin="10,10,0,0">
+            <ComboBoxItem Content= "InGreen"/>
+            <ComboBoxItem Content="Цветочный сад"/>
+            <ComboBoxItem Content="Santino"/>
+            <ComboBoxItem Content="Gloria Garden"/>
+            <ComboBoxItem Content="GardenPlast"/>
+        </ComboBox>
+        
+        <Label Content="cost" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <TextBox  Text="{Binding ProductCost}"  Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="409"/>
+
+        <Label Content="in stock" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <TextBox  Text="{Binding ProductQuantityInStock}"  Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="409"/>
+
+        <Label Content="status" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="244"/>
+        <ComboBox x:Name="status" HorizontalAlignment="Left" Grid.Row="8" Grid.Column="1" VerticalAlignment="Top" Width="409" Margin="10,10,0,0">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+        
+        <Button Name="Comeback"  Content="Отмена" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="10" VerticalAlignment="Top" Width="75" Click="Comeback_Click"/>
+        <Button x:Name="Save" Content="Сохранить" Grid.Column="1" HorizontalAlignment="Left" Margin="10,8,0,0" Grid.Row="10" VerticalAlignment="Top" Width="75" Click="Save_Click"/>
+
+
+    </Grid>
+</Window>
